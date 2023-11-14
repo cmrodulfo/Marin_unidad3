@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Header/>
-      {productos.map(producto=><Card imagen={producto.imagen} nombre={producto.nombre} descripcion={producto.descripcion} stock={producto.cantidad} precio={producto.precio} codigo={producto.codigo} /> )  }
+      {productos.map(producto=><Card imagen={producto.imagen} nombre={producto.nombre} descripcion={producto.descripcion} cantidad={producto.cantidad} precio={producto.precio} codigo={producto.codigo} /> )  }
     </>
   )
 }
