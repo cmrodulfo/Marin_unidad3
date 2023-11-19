@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Image, Text, Heading, Flex, Badge, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Button } from '@chakra-ui/react';
+import {Box, Image, Text, Heading, Flex, Badge, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Button, Spacer } from '@chakra-ui/react';
 
 
 
@@ -21,17 +21,19 @@ const ProductDetail = ({ product }) => {
 
 
   return (
-    <Container maxW='container.sm' bg='green.400' color='#262626'>
 
-      <Box maxW="800px" mx="auto" p="4" bg="">
 
-        <Flex direction={{ base: 'column', md: 'row' }} align="center">
+    <Box maxW="100%" mx="auto" p="4">
 
-          <Image src={image} alt={name} w='300px' margin='30px' />
+      <Flex direction={{ base: 'column', md: 'row' }} align="center">
+        <Box w="50%" align="right">
+          <Image src={image} alt={name} w='350px' mt='30px' />
+        </Box>
+        <Spacer/>
+        <Box w="40%">
+          <Box w="60%" ml={{ base: 0, md: '4' }} mt={{ base: '4', md: 0 }}>
 
-          <Box ml={{ base: 0, md: '4' }} mt={{ base: '4', md: 0 }}>
-
-            <Heading as="h1" size="lg" color="teal.500">
+            <Heading as="h1" size="lg" color="teal">
               {name}
             </Heading>
 
@@ -47,7 +49,7 @@ const ProductDetail = ({ product }) => {
               Stock: {stock}
             </Badge>
 
-            <Text fontSize="lg" mt="2" color="gray.600">
+            <Text fontSize="lg" mt="2" color="gray.800">
               Precio: ${price}
             </Text>
 
@@ -74,9 +76,10 @@ const ProductDetail = ({ product }) => {
               Comprar
             </Button>
           </Box>
-        </Flex>
-      </Box>
-    </Container>
+        </Box>
+      </Flex>
+    </Box>
+
   );
 };
 

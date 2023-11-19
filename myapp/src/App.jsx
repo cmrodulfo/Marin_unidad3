@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import Header from './Components/Header/Header'
 import './App.css'
-import ProductDetail from './ProductDetail/ProductDetail'
+import ProductDetail from './Components/ProductDetail/ProductDetail'
 import { ChakraProvider } from '@chakra-ui/react'
+import Footer from './Components/Footer/Footer'
 
 const product = {
   code: "GOW001",
@@ -15,12 +16,13 @@ const product = {
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
+  
     <ChakraProvider>
       <Header />
       <ProductDetail product={product} />
+      <Footer/>
     </ChakraProvider>
   )
 }
